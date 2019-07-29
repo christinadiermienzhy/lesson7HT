@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>lesson7 home task</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var padString=function padString(string,outputLength,symbol, side){
+			 if (typeof (string)==='string'&& typeof (outputLength)==='number'&& typeof (symbol)==='string'&& typeof (side)==='boolean'){
+				var diffLength=outputLength-string.length;
+				if (diffLength<=0){
+					return string;
+				}else{
+					return side?padString (string+symbol, outputLength, symbol, side):padString (symbol+string, outputLength, symbol, side);
+				}
+			} else {
+				console.log('Incorrect input');
+			}
+		}
+		console.log (padString('Ivan', 9, '*',true));
+		//console.log (padString('Aleksandr', 5, '*',true));
+		//padString();
+
+	</script>
+</body>
+</html>
