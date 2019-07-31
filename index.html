@@ -17,9 +17,42 @@
 				console.log('Incorrect input');
 			}
 		}
-		console.log (padString('Ivan', 9, '*',true));
+		//console.log (padString('Ivan', 9, '*',true));
 		//console.log (padString('Aleksandr', 5, '*',true));
 		//padString();
+		
+// Напишите свое возведение в степень, принимаем число и в какую степень нужно возвести
+		var doExponentiation=function doExponentiation (a,b){
+			if (typeof (a)==='number'&& typeof (b)==='number'){
+				if (b===0&& (a>0||a<0)) {
+					return 1;
+				} else if (b===0 && a===0){
+					return 'This is impossible';
+				} else  {
+					var n=1;
+					if (b>0){
+						for (var i=1; i<=b;i++){
+						n=n*a;
+						}
+						return n;
+					} else {
+						for (var i=-1; i>=b;i--){
+						n=n*a;
+						}
+						return (1/n).toFixed(5);
+					}	
+				}	
+			} else {
+				return 'Incorrect input';
+			}
+		}
+		console.log (doExponentiation (2,7));
+		//console.log (doExponentiation (-2,-5));
+		//console.log (doExponentiation (2,-7));
+		//console.log (doExponentiation (-2,7));
+		//console.log (doExponentiation (2,7));
+		//console.log (doExponentiation (0,0));
+		//console.log (doExponentiation ());
 
 	</script>
 </body>
